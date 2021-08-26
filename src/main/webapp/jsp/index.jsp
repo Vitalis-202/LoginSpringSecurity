@@ -60,7 +60,10 @@ crossorigin="anonymous"></script>
                   <a class="nav-link" href="#conviertete-en-orador">Nav4</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-platzi" href="#" data-toggle="modal" data-target="#modalCompra">Nav5</a>
+                  <form action="/logout" method="post">
+    				<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" >
+    				<a class="nav-link" href="/logout">Cerrar Sesion</a>
+    				</form>
                 </li>
     
               </ul>
@@ -176,7 +179,7 @@ crossorigin="anonymous"></script>
       <div class="container">
       	<div class="form-row">
       		
-      		<div class="col-md-3 offset-md-3">
+      		<div class="col-md-3 offset-md-2">
 				<form:button class="btn btn-secondary btn-block">MODIFICAR</form:button>
 			</div>
 			<div class="col-md-3">
@@ -197,6 +200,14 @@ crossorigin="anonymous"></script>
     </div>
    
     <!-- /MAIN LISTAR -->
+    <!-- CERRAR SESION -->
+    <div class="col-md-4 offset-md-4 mt-4 mb-4">
+    <form action="/logout" method="post">
+    	<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" >
+    	<button class="btn btn-secondary btn-block">Cerrar Sesion</button>
+    </form>
+    </div>
+    <!-- /CERRAR SESION -->
     
 
 </body>

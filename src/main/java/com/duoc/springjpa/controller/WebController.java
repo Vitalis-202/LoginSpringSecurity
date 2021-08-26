@@ -46,6 +46,12 @@ public class WebController {
 		
 		return "index";
 	}
+	@GetMapping("/login")
+	public String getLogin() 
+	{
+		return "login";
+	}
+	
 	@PostMapping("/editar")
 	public String getEditarProducto(@Valid @ModelAttribute("producto") Product producto, BindingResult br, Model model) {
 		
