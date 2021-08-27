@@ -39,8 +39,8 @@ public class ApiRestController {
 	}
 	
 	@GetMapping("/productlines/{codigo}")
-	public ProductLine buscarProductLines(@PathVariable String codigo) {
-		return servicePL.buscarProductoLine(codigo);
+	public ProductLine buscarProductLines(@PathVariable String id) {
+		return servicePL.buscarProductoLine(id);
 	}
 
 }
