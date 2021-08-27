@@ -207,7 +207,7 @@ crossorigin="anonymous"></script>
     	<button class="btn btn-secondary btn-block">Cerrar Sesion</button>
     </form>
     </div>
-    <p>CambiosGit</p>
+    <p>CambiosGit </p>
     <!-- /CERRAR SESION -->
     
 
