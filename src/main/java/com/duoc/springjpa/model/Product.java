@@ -2,6 +2,10 @@ package com.duoc.springjpa.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -58,10 +62,12 @@ public class Product implements Serializable {
 	
 	//bi-directional many-to-one association to Orderdetail
 	@OneToMany(mappedBy="product")
+	@JsonBackReference
 	private List<Orderdetail> orderdetails;
 
 	//bi-directional many-to-one association to ProductLine
 	@ManyToOne
+	@JsonManagedReference
 	@JoinColumn(name="product_line", nullable=false)
 	private ProductLine productLineBean;
 

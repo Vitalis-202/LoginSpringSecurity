@@ -2,6 +2,9 @@ package com.duoc.springjpa.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import java.util.List;
 
 
@@ -32,6 +35,7 @@ public class ProductLine implements Serializable {
 
 	//bi-directional many-to-one association to Product
 	@OneToMany(mappedBy="productLineBean")
+	@JsonBackReference
 	private List<Product> products;
 
 	public ProductLine() {
